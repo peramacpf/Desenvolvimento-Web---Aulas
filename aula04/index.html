@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h2 align="center">Formulário HTML</h2>
+    <table align="center" width="600" bgcolor="lightblue">
+        <tr>
+            <td>
+                <fieldset>
+                    <!-- Contorno do Formulário -->
+                    <legend>Informações de Cadastro</legend>
+                    <form action="cadastrar.php" method="post" name="cadastro">
+                        <table cellspacing="5" cellpadding="5">
+                            <tr>
+                                <td><label for="nome">Nome:</label></td>
+                                <td><input type="text" id="nome" name="name#" size="30" maxlength="90" placeholder="Digite seu nome" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="mail">E-Mail:</label></td>
+                                <td><input type="email" id="mail" name="mail" size="30" maxlength="60" placeholder="Digite seu E-mail" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="tel">Telefone:</label></td>
+                                <td><input type="text" id="tel" name="tel" size="30" maxlength="15" placeholder="Informe seu telefone - (XX) 9XXXX-XXXX" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="data_nasc">Data de Nascimento:</label></td>
+                                <td><input type="date" id="data_nasc" name="data_nasc" min="1950-01-01" max="2006-12-31" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="senha">Senha:</label></td>
+                                <td><input type="password" id="senha" name="senha" placeholder="Digite sua senha" size="30" maxlength="60" required></td>
+                            </tr>
+                            <tr>
+                                <td><label>Sexo:</label></td>
+                                <td>
+                                    <label><input type="radio" name="sexo" value="M" required> Masculino</label>
+                                    <br>
+                                    <label><input type="radio" name="sexo" value="F" required> Feminino</label>
+                                    <br>
+                                    <label><input type="radio" name="sexo" value="outro" required> Outro</label>
+                                    <br>
+                                    <label><input type="radio" name="sexo" value="not" required> Não Informar</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Estilos Musicais Preferidos:</label></td>
+                                <td>
+                                    <label><input type="checkbox" name="estilos[]" value="samba"> Samba</label>
+                                    <br>
+                                    <label><input type="checkbox" name="estilos[]" value="mpb"> MPB</label>
+                                    <br>
+                                    <label><input type="checkbox" name="estilos[]" value="rap"> Rap</label>
+                                    <br>
+                                    <label><input type="checkbox" name="estilos[]" value="sertanejo"> Sertanejo</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="estado">Estados:</label></td>
+                                <td>
+                                    <select id="estado" name="estado" required>
+                                        <option value="" disabled selected>--Selecione--</option>
+                                        <optgroup label="Região Norte">
+                                            <option value="AC">Acre</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="AP">Amapá</option>
+                                            <option value="PA">Pará</option>
+                                            <option value="RO">Rondônia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="TO">Tocantins</option>
+                                        </optgroup>
+                                        <optgroup label="Região Nordeste">
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE">Ceará</option>
+                                            <option value="MA">Maranhão</option>
+                                            <option value="PB">Paraíba</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piauí</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="SE">Sergipe</option>
+                                        </optgroup>
+                                        <optgroup label="Região Centro-Oeste">
+                                            <option value="DF">Distrito Federal</option>
+                                            <option value="GO">Goiás</option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                            <option value="MT">Mato Grosso</option>
+                                        </optgroup>
+                                        <optgroup label="Região Sudeste">
+                                            <option value="ES">Espírito Santo</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="SP">São Paulo</option>
+                                        </optgroup>
+                                        <optgroup label="Região Sul">
+                                            <option value="PR">Paraná</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="SC">Santa Catarina</option>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="coment">Comentário:</label></td>
+                                <td><textarea id="coment" name="coment" cols="40" rows="6" maxlength="240" placeholder="Digite seu comentário"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><label for="anexar">Anexar arquivo:</label></td>
+                                <td><input type="file" id="anexar" name="anexar" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <input type="submit" name="enviar" id="enviar" value="ENVIAR">
+                                    <input type="reset" name="limpar" id="limpar" value="CANCELAR">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </fieldset>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
