@@ -1,0 +1,17 @@
+body {
+    background-color: #0b6350;
+}
+
+#titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ff5614;
+    font-style: italic;
+    font-size: 35pt;
+}
+
+.texto{
+    text-align: center;
+    text-decoration: dotted;
+    color: #6e124f;
+    font-weight: bolder;
+}

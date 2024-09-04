@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula JavaScript 07</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="conteudo">
+        <h2>Cadastro com Máscaras JS</h2>
+        <form action="#" method="post" name="cad" id="cad">
+            <label> Nome: </label>
+            <input type="text" id="nome" name="nome" required/>
+            <br/>
+            <div id="escolha">
+                <label>Tipo de Documento:</label>
+                <label>
+                <input type="radio" name="tipo_documento" value="cpf" id="tipocpf" required>CPF
+                </label>
+                <label>
+                <input type="radio" name="tipo_documento" value="cnpj" id="tipocnpj" required>CNPJ
+                </label>
+            </div>
+            <br>
+            <div class="ocultar" id="escolhacpf">
+            <label> CPF: </label>
+                <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="O formato deve ser 000.000.000-00"/>
+                <br/>
+            </div>
+            <div class="ocultar" id="escolhacnpj">
+            <label> CNPJ: </label>
+            <input type="text" id="cnpj" name="cnpj" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="O formato deve ser 000.000.000-00"/>
+            <br/>
+            </div>
+            <label> Telefone: </label>
+            <input type="text" id="telefone" name="telefone" required placeholder="\(\d{2}\) \d{4,5}-\d{4}">
+            <br/>
+            <label>CEP</label>
+            <input type="text" id="cep" name="cep" required placeholder="\d{5}-\d{3}"/>
+            <br/>
+            <label>Data Nascimento:</label>
+            <input type="text" id="data_nasc" name="data_nasc" required/>
+            <br/>
+            <input type="submit" id="enviar" name="enviar" value="ENVIAR"/>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

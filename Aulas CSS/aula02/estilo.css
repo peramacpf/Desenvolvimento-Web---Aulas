@@ -1,0 +1,388 @@
+/* h2, h3, p, em (pode manipular varias tags de uma vez)*/
+/* manipula todas as tags -> */
+* { /*CSS RESET*/
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #edffd6a5; 
+    background-image: url(img/fundo.png);
+    align-items: center;
+    background-repeat: repeat;
+    /* background-position: right top; */
+    background-attachment: fixed;
+    background-size: 0 auto;
+}
+
+header {
+    width: 960px;
+    height: 250px;
+    /* border-style: solid;
+    border-width: 2px;
+    border-color: #772828a5; */
+    border: none/*1px solid #000000a5*/;
+    background-color: rgba(41, 199, 115, 0.63);
+    background-image: url(img/plantea.png);
+    background-size: 960px 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /*Sequencia: 
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px; 
+    margin: 10px 100px 10px 450px*/
+    /* margin: 0 auto; */
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px /*rgb(red, green, blue)*/; 
+}
+
+@keyframes slide {
+    0% {background-image: url(img/plantea.png);}
+    20% {background-image: url(img/ai.png);}
+    40% {background-image: url(img/dugayw.png);}
+    60% {background-image: url(img/shhhhhhhhh.png);}
+    80% {background-image: url(img/010101.png);}
+    100% {background-image: url(img/ti.png);}
+}
+
+nav {
+
+    width: 960px;
+    height: 50px;
+    border: none/*1px solid #000000a5*/;
+    background-color: rgba(44, 161, 99, 0.651);
+    /* margin: 0 auto; */
+    /* margin-top: 10px; */
+    margin-block: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px /*rgb(red, green, blue)*/; 
+}
+
+/*Menu principal*/
+
+nav ul {
+    display: flex;
+    justify-content: space-around; 
+    /* line-height: 50px; */
+    padding: 15px;
+    margin: 0;
+}
+
+nav > ul > li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12pt;
+    text-shadow: 2px 2px 2px rgba(44, 92, 66, 0.651);
+    padding: 10px 10px ;
+    transition: all, 0.2s;
+}
+
+nav ul li a:hover {
+    color: black;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12pt;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+    padding: 10px 10px ;
+    /* background-color: rgb(123, 255, 0); */
+    border-radius: 5px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    transition: all, 0.5s;
+}
+/*Menu principal*/
+
+/* main{
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    height: 800px;
+    /* border: 2px solid #000000a5;  
+    /* margin: 0 auto; 
+    margin-block: 10px;
+} */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 30px;
+    padding: 10px;
+}
+
+#lateral{
+    /* width: 200px; 
+    height: 790px; */
+    border: none/*1px solid #000000a5*/;
+    background-image: url(img/terra-planeta.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 200px 790px;
+    animation-name: lateral;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* background-color: rgba(148, 194, 170, 0.651); */
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px /*rgb(red, green, blue)*/; 
+}
+
+@keyframes slide_lateral {
+    0% {background-image: url(img/terra-planeta.webp);}
+    100% {background-image: url(img/rede.jpg);}
+}
+
+#conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 740px;
+    height: 690px;
+    border: none/*1px solid #000000a5*/;
+    background-color: rgba(148, 194, 170, 0.651);
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px /*rgb(red, green, blue)*/; 
+
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    width: 340px;
+    height: 300px;
+    /* border: 1px solid #000; */
+    margin: 10px;
+    background-color: rgba(148, 194, 170, 0.651);
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px /*rgb(red, green, blue)*/; 
+
+}
+
+section h2 {
+    text-align: center;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 2px rgba(112, 148, 129, 0.651);
+}
+
+section p {
+    text-align: justify;
+    padding: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 20px;
+}
+
+#separa {
+    display: block;
+    width: 700px;
+    height: 40px;
+    /* border: 1px solid #000; */
+    background-color: rgba(24, 173, 96, 0.425);
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px /*rgb(red, green, blue)*/; 
+}
+
+#img {
+    margin-top: 15px;
+    width: 700px;
+    height: 300px;
+    /* border: 1px solid #000; */
+    background-image: url(img/babygif.gif);
+    background-position: center;
+    background-size: 700px 290px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px /*rgb(red, green, blue)*/; 
+}
+
+/* Formulário de Contato */
+
+#contato {
+    float: right;
+    width: 740px;
+    height: 590px;
+}
+
+#formulario {
+    width: 720px;
+    height: 560px;
+}
+
+fieldset {
+    border: 4px outset #BABACA;
+    border-radius: 5px;
+    box-shadow: 3px 2px 2px rgba(10, 12, 11, 0.6);
+    margin: 15px;
+    background-color: rgba(148, 194, 170, 0.651); 
+    padding: 5px 0 0 15px;
+}
+
+legend {
+    color:#000;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    padding: 0 10px 0 10px ;
+    text-shadow: 2px 3px 3px rgba(210, 212, 211, 0.8);
+    /* text-align: center; */
+}
+
+label {
+    color: #000;
+    font-weight: bolder;
+    font-size: 12pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* float: left;
+    margin-top: 10px;
+    display: block; */
+    line-height: 50px;
+}
+
+input {
+    border-bottom: 2px solid #000;
+    outline: none;
+    border-radius: 4px;
+    width: 350px;
+    height: 30px;
+    font-size: 12pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    float: right;
+    margin-right: 180px;
+    margin-top: 10px;
+    transition: width .35s ease-in-out;
+}
+
+input:focus{
+    width: 360px;
+}
+
+input:hover {
+    background-color: rgba(241, 241, 241, 0.6);
+    border-radius: 4px;
+}
+
+select {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-radius: 5px;
+    outline: none;
+    width: 200px;
+    height: 30px;
+    font-size: 12pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    float: right;
+    margin-right: 330px;
+    margin-top: 10px;
+}
+
+textarea {
+    border: 2px solid #000;
+    border-radius: 4px;
+    width: 350px;
+    height: 160px;
+    resize: none;
+    font-size: 12pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    float: right;
+    margin-right: 180px;
+    margin-top: 10px;
+}
+
+#btn {
+    width: 300px;
+    height: 0;
+    border: none;
+    float: none;
+    margin-left: 200px;
+}
+
+input[type=submit] {
+    float: left;
+    width: 90px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(58, 201, 58);
+    color: #FFF;
+    font-weight: bolder;
+    box-shadow: 3px 3px 4px rgba(10, 10, 10, 0.7);
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(20, 124, 20);
+}
+
+input[type=reset] {
+    float: left;
+    width: 90px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(201, 137, 58);
+    color: #FFF;
+    font-weight: bolder;
+    box-shadow: 3px 3px 4px rgba(10, 10, 10, 0.7);
+    cursor: pointer;
+}
+
+input[type=reset]:hover {
+    background-color: rgb(141, 93, 33);
+}
+
+/* Formulário de Contato */
+
+footer {
+    width: 960px;
+    height: 50px;
+    border: none/*1px solid #000000a5*/;
+    background-color: rgba(44, 92, 66, 0.651);
+    /* margin: 0 auto; */
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px /*rgb(red, green, blue)*/; 
+}
+
+.cont_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont_footer p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.redes_sociais {
+    color: black;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.redes_sociais a:hover {
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width:760px) {
+    body {
+        width: 100%;
+    }
+}

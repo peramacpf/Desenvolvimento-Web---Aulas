@@ -1,0 +1,46 @@
+.logo {
+    max-width: 25%;
+}
+
+header {
+    background-image: url(img/sub-buzz-3208-1718306820-5.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    animation-name: slide;
+    animation-duration: 6;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/* 
+@keyframes slide {
+    0% {background-image: url(img/jordan\ 4\ big\ kid.webp);}
+    20% {background-image: url(img/Jodan\ 5\ olive.webp);}
+    40% {background-image: url(img/Jordan\ 12.webp);}
+    80% {background-image: url(img/Jordan\ 1\ lost\ and\ found.webp);}
+} */
+
+.img_sobre {
+    background-image: url(img/plantea.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+form {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+form label {
+    font-weight: bolder;
+}
+
+form textarea {
+    resize: none;
+}
+
+.modal.title{
+    font-weight: bolder;
+}

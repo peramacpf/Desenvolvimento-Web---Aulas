@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula02 - CSS3</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <header>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="contado.html">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <aside id="lateral">
+
+        </aside>
+        <article id="conteudo">
+            <div class="contato">
+                <section id="formulario">
+                    <h2>Contato</h2>
+                    <fieldset>
+                        <legend>Fale Conosco</legend>
+                        <form>
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome completo" size="30" maxlength="" required>
+                            <br />
+                            <label>Email:</label>
+                            <input type="email" id="mail" name="mail" size="30" maxlength="60" placeholder="Digite seu email" required />
+                            <br />
+                            <label>Telfone:</label>
+                            <input type="text" id="tel" name="tel" size="30" maxlength="15" placeholder="(XX) XXXXX-XXXX" required />
+                            <br />
+                            <label>Assunto:</label>
+                            <select id="estado" name="estado" required>
+                                    <option value="" selected="selected">--Selecione--</option>
+                                    <optgroup label="Norte">
+                                        <option value="EL">Elogio</option>
+                                        <option value="DU">Duvida</option>
+                                        <option value="SU">Sugestão</option>
+                                        <option value="CR">Crítica</option>
+                                        <option value="OU">Outro</option>
+                                    </optgroup>
+                                    <br/>
+                            <label>Comentario:</label>
+                            <textarea id="coment" name="coment" cols="40" rows="6" maxlength="240" placeholder="Digite seu comentário" required></textarea>
+                            <br/>
+                            <div id="btn">
+                                <input type="submit" id="enviar" name="enviar" value="ENVIAR" required/>
+                                <input type="reset" id="limpar" name="limpar" value="CANCELAR" required/>
+                            </div>
+                        </form>
+                </fieldset>  
+                </section>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
